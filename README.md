@@ -15,8 +15,8 @@ classにしたものも実装する予定
 
 ＊実行の様子
 
-yukarinoki@yukarinoki-OptiPlex-9010:~/sandbox$ g++ -std=c++14 demo.c
-yukarinoki@yukarinoki-OptiPlex-9010:~/sandbox$ ./a.out
+yukarinoki@yukarinoki-OptiPlex-9010: /sandbox$ g++ -std=c++14 demo.c
+yukarinoki@yukarinoki-OptiPlex-9010: /sandbox$ ./a.out
 bird#
 bison#
 cat#
