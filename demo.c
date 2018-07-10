@@ -5,12 +5,12 @@
 #include <cstdio>
 using namespace std;
 
-int construct(int cn,int fidx,int lidx,int base_idx, vector<int> &base, vector<int> &check, vector<string> &vs, vector<int> &code){
+void construct(int cn,int fidx,int lidx,int base_idx, vector<int> &base, vector<int> &check, vector<string> &vs, vector<int> &code){
     vector<char> cset;
     vector<int> cset_idx;
     cset.push_back(code[vs[fidx][cn]]);
     cset_idx.push_back(fidx);
-    if(base_idx>= 20) return 0; 
+
     printf("base: %d, cn: %d fidx: %d, lidx: %d\n", base_idx, cn, fidx, lidx);
     for(int i=1; i< base.size(); i++) printf("%2d ", i);
     cout << endl;
@@ -62,26 +62,25 @@ int construct(int cn,int fidx,int lidx,int base_idx, vector<int> &base, vector<i
             construct(cn+1, cset_idx[i], cset_idx[i+1]-1, bs + cset[i], base, check, vs,code); 
         }
     }
-
-    return 0;
 }
 
 int main(){
-
-    int n; 
     /*
+    int n; 
     cin >> n;
     vector<string> vs(n);
     for(int i=0;i<n;i++) cin >> vs[i];
+    
+    sort(vs.begin(),vs.end());
+    // multikey quick sort is more desarable from the view point of speed than STL quick sort.
     */
-//    sort(vs.begin(),vs.end());
+    
     vector<string> vs(3);
     vs[0] = "bird#";
     vs[1] = "bison#";
     vs[2] = "cat#";
     for(int i=0;i<3;i++) cout << vs[i] << endl;
     
-    // multikey quick sort is more desarable from the view point of speed than STL quick sort.
     vector<int> base(2), check(2),code(256);
     code['#'] = 1;
     code['a'] = 2;
