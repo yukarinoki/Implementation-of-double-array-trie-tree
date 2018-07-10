@@ -3,7 +3,7 @@
 Double-Array Articles (http://nanika.osonae.com/DArray/index.html)
 を参考にして、ダブル配列によるTrie木を実装した。
 
-Demo.cはダブル配列（ Double-Array ）の概要　(http://nanika.osonae.com/DArray/dary.html)に載っている"図 1 ： "bird", "bison", "cat" を登録したトライとダブル配列"を完全に再現する。
+Demo.cはダブル配列（ Double-Array ）の概要　(http://nanika.osonae.com/DArray/dary.html) に載っている"図 1 ： "bird", "bison", "cat" を登録したトライとダブル配列"を完全に再現する。
 
 このプログラムは初めにまとまってソートされて重複のないvector<string>を受け取りTrie木を構成する。動的な更新には対応していない。
 
@@ -16,10 +16,12 @@ classにしたものも実装する予定
 ＊実行の様子
 
 yukarinoki@yukarinoki-OptiPlex-9010: /sandbox$ g++ -std=c++14 demo.c
+
 yukarinoki@yukarinoki-OptiPlex-9010: /sandbox$ ./a.out
 bird#
 bison#
 cat#
+
 base: 1, cn: 0 fidx: 0, lidx: 2
  1
  1
